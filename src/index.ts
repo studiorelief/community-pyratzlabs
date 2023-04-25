@@ -1,10 +1,20 @@
 import { loadAttributesScript } from '$utils/fs-attributes';
 import { greetUser } from '$utils/greet';
+import { loadModelViewerScript } from '$utils/modal-viewer';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   const name = 'John Doe';
   greetUser(name);
+
+  // load modalviewser
+  loadModelViewerScript()
+    .then(() => {
+      console.log('Model viewer script loaded successfully');
+    })
+    .catch((error) => {
+      console.error('Error loading model viewer script:', error);
+    });
 
   // Load Finsweet Attributes scripts
   Promise.all([
@@ -17,17 +27,17 @@ window.Webflow.push(() => {
     loadAttributesScript(
       'https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js'
     ),
+    loadAttributesScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js'),
   ])
     .then(() => {
       console.log('All Finsweet Attributes scripts loaded');
-      // Your code that depends on the Finsweet Attributes scripts can go here
     })
     .catch((error) => {
       console.error(error);
     });
 
   // Avoid duplicate categories filters - From body global
-  document.addEventListener('DOMContentLoaded', function dumpDups() {
+  setTimeout(function () {
     const rr = new Set();
     for (const div of document.querySelectorAll('.checkbox-filter')) {
       if (rr.has(div.textContent.trim())) {
@@ -35,7 +45,5 @@ window.Webflow.push(() => {
       }
       rr.add(div.textContent.trim());
     }
-
-    dumpDups();
-  });
+  }, 0);
 });

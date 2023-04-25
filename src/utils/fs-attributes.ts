@@ -17,5 +17,6 @@ loadAttributesScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilte
 loadAttributesScript(
   'https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js'
 );
+loadAttributesScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js');
 
 export { loadAttributesScript };
