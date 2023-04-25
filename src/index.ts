@@ -1,20 +1,33 @@
 import { loadAttributesScript } from '$utils/fs-attributes';
-import { greetUser } from '$utils/greet';
 import { loadModelViewerScript } from '$utils/modal-viewer';
+import { appSwiper, loadSwiper } from '$utils/swiper';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
+  // Check if the current page is the home page
+  if (window.location.pathname === '/') {
+    // Load modalviewser
+    loadModelViewerScript()
+      .then(() => {
+        console.log('Model viewer script loaded successfully');
+      })
+      .catch((error) => {
+        console.error('Error loading model viewer script:', error);
+      });
+  }
 
-  // load modalviewser
-  loadModelViewerScript()
-    .then(() => {
-      console.log('Model viewer script loaded successfully');
-    })
-    .catch((error) => {
-      console.error('Error loading model viewer script:', error);
-    });
+  // Check if the current page is the home page
+  if (window.location.pathname === '/') {
+    // load Swiper
+    loadSwiper()
+      .then(() => {
+        console.log('Swiper script loaded successfully');
+        appSwiper();
+      })
+      .catch((error) => {
+        console.error('Error loading Swiper script:', error);
+      });
+  }
 
   // Load Finsweet Attributes scripts
   Promise.all([
