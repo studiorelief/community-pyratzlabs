@@ -219,7 +219,7 @@ function appSwiper() {
         },
         // desktop
         992: {
-          slidesPerView: 4,
+          slidesPerView: 4.2,
           spaceBetween: '2%',
         },
       },

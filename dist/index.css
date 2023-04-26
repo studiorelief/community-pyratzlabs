@@ -1,1 +1,6 @@
-*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+/* src/index.css */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*# sourceMappingURL=index.css.map */
