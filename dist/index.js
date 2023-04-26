@@ -14,14 +14,12 @@
       document.head.appendChild(script);
     });
   }
-  loadAttributesScript(
-    "https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"
-  );
   loadAttributesScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js");
+  loadAttributesScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js");
   loadAttributesScript(
     "https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js"
   );
-  loadAttributesScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js");
+  loadAttributesScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-copyclip@1/copyclip.js");
 
   // src/utils/modal-viewer.ts
   function loadModelViewerScript() {
@@ -285,15 +283,15 @@
     }
     Promise.all([
       loadAttributesScript(
-        "https://cdn.jsdelivr.net/npm/@finsweet/attributes-scrolldisable@1/scrolldisable.js"
-      ),
-      loadAttributesScript(
         "https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsfilter@1/cmsfilter.js"
       ),
+      loadAttributesScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js"),
       loadAttributesScript(
         "https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js"
       ),
-      loadAttributesScript("https://cdn.jsdelivr.net/npm/@finsweet/attributes-cmsload@1/cmsload.js")
+      loadAttributesScript(
+        "https://cdn.jsdelivr.net/npm/@finsweet/attributes-copyclip@1/copyclip.js"
+      )
     ]).then(() => {
       console.log("All Finsweet Attributes scripts loaded");
     }).catch((error) => {
