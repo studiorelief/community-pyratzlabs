@@ -29,6 +29,28 @@ window.Webflow.push(() => {
       });
   }
 
+  // Process for auto copy-button
+  // Sélectionne toutes les balises ayant la classe "code-wrapper"
+  const codeWrappers = document.querySelectorAll('.code-wrapper');
+
+  // Itère sur chaque élément
+  codeWrappers.forEach((wrapper) => {
+    // Ajoute l'attribut "fs-copyclip-element" avec la valeur "copy-sibling"
+    wrapper.setAttribute('fs-copyclip-element', 'copy-sibling');
+
+    // Crée une nouvelle div avec les attributs et la classe spécifiés
+    const newDiv = document.createElement('div');
+    newDiv.setAttribute('fs-copyclip-element', 'click');
+    newDiv.setAttribute('fs-copyclip-message', 'Copied!');
+    newDiv.setAttribute('fs-copyclip-active', 'is-active');
+    newDiv.setAttribute('fs-copyclip-duration', '750');
+    newDiv.classList.add('button-copy', 'w-button');
+    newDiv.textContent = 'Copy';
+
+    // Insère la nouvelle div après l'élément "code-wrapper"
+    wrapper.insertAdjacentElement('afterend', newDiv);
+  });
+
   // Load Finsweet Attributes scripts
   Promise.all([
     loadAttributesScript(
