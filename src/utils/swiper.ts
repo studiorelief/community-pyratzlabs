@@ -56,7 +56,7 @@ function appSwiper() {
         },
       },
       scrollbar: {
-        el: $(this).find('.swiper-drag-wrapper')[0],
+        el: $(this).find('.swiper-drag-wrapper.is-show')[0],
         draggable: true,
         dragClass: 'swiper-drag',
         snapOnRelease: true,
@@ -80,7 +80,7 @@ function appSwiper() {
       speed: sliderDuration,
       loop: loopMode,
       autoHeight: false,
-      centeredSlides: loopMode,
+      centeredSlides: false,
       followFinger: true,
       freeMode: true,
       slideToClickedSlide: true,
@@ -107,7 +107,7 @@ function appSwiper() {
         },
         // desktop
         992: {
-          slidesPerView: 1.5,
+          slidesPerView: 3.2,
           spaceBetween: '2%',
         },
       },
