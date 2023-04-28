@@ -22,13 +22,13 @@ function appSwiper() {
     }
     const swiper = new Swiper($(this).find('.swiper.is-show')[0], {
       speed: sliderDuration,
-      loop: loopMode,
+      /*       loop: loopMode, */
       autoHeight: false,
-      centeredSlides: loopMode,
+      /* centeredSlides: loopMode, */
       followFinger: true,
       freeMode: true,
-      slideToClickedSlide: true,
-      slidesPerView: 1,
+      /* slideToClickedSlide: true, */
+      slidesPerView: 'auto',
       spaceBetween: '4%',
       rewind: false,
       mousewheel: {
@@ -41,18 +41,18 @@ function appSwiper() {
       breakpoints: {
         // mobile landscape
         480: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // tablet
         768: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // desktop
         992: {
-          slidesPerView: 3.5,
-          spaceBetween: '2%',
+          slidesPerView: 'auto',
+          spaceBetween: '4%',
         },
       },
       scrollbar: {
@@ -61,8 +61,8 @@ function appSwiper() {
         dragClass: 'swiper-drag',
         snapOnRelease: true,
       },
-      slideActiveClass: 'is-active',
-      slideDuplicateActiveClass: 'is-active',
+      /* slideActiveClass: 'is-active', */
+      /* slideDuplicateActiveClass: 'is-active', */
     });
   });
 
@@ -78,13 +78,13 @@ function appSwiper() {
     }
     const swiper = new Swiper($(this).find('.swiper.is-article')[0], {
       speed: sliderDuration,
-      loop: loopMode,
+      /*       loop: loopMode, */
       autoHeight: false,
-      centeredSlides: false,
+      /* centeredSlides: loopMode, */
       followFinger: true,
       freeMode: true,
-      slideToClickedSlide: true,
-      slidesPerView: 1,
+      /* slideToClickedSlide: true, */
+      slidesPerView: 'auto',
       spaceBetween: '4%',
       rewind: false,
       mousewheel: {
@@ -97,18 +97,18 @@ function appSwiper() {
       breakpoints: {
         // mobile landscape
         480: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // tablet
         768: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // desktop
         992: {
-          slidesPerView: 3.2,
-          spaceBetween: '2%',
+          slidesPerView: 'auto',
+          spaceBetween: '4%',
         },
       },
       scrollbar: {
@@ -134,13 +134,13 @@ function appSwiper() {
     }
     const swiper = new Swiper($(this).find('.swiper.is-event')[0], {
       speed: sliderDuration,
-      loop: loopMode,
+      /*       loop: loopMode, */
       autoHeight: false,
-      centeredSlides: loopMode,
+      /* centeredSlides: loopMode, */
       followFinger: true,
       freeMode: true,
-      slideToClickedSlide: true,
-      slidesPerView: 1,
+      /* slideToClickedSlide: true, */
+      slidesPerView: 'auto',
       spaceBetween: '4%',
       rewind: false,
       mousewheel: {
@@ -153,18 +153,18 @@ function appSwiper() {
       breakpoints: {
         // mobile landscape
         480: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // tablet
         768: {
-          slidesPerView: 1,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // desktop
         992: {
-          slidesPerView: 1.2,
-          spaceBetween: '2%',
+          slidesPerView: 'auto',
+          spaceBetween: '4%',
         },
       },
       scrollbar: {
@@ -190,13 +190,13 @@ function appSwiper() {
     }
     const swiper = new Swiper($(this).find('.swiper.is-toolbox')[0], {
       speed: sliderDuration,
-      loop: loopMode,
+      /*       loop: loopMode, */
       autoHeight: false,
-      centeredSlides: loopMode,
+      /* centeredSlides: loopMode, */
       followFinger: true,
       freeMode: true,
-      slideToClickedSlide: true,
-      slidesPerView: 1,
+      /* slideToClickedSlide: true, */
+      slidesPerView: 'auto',
       spaceBetween: '4%',
       rewind: false,
       mousewheel: {
@@ -209,18 +209,18 @@ function appSwiper() {
       breakpoints: {
         // mobile landscape
         480: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // tablet
         768: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
           spaceBetween: '4%',
         },
         // desktop
         992: {
-          slidesPerView: 4.2,
-          spaceBetween: '2%',
+          slidesPerView: 'auto',
+          spaceBetween: '4%',
         },
       },
       scrollbar: {
